@@ -1,0 +1,59 @@
+# Generate HTML
+html_template = f"""
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{resume_data['name']} - Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>{resume_data['name']}</h1>
+        <h3>{resume_data['title']}</h3>
+        <p>{resume_data['contact']['location']} | {resume_data['contact']['phone']} | 
+        <a href="mailto:{resume_data['contact']['email']}">{resume_data['contact']['email']}</a></p>
+        <p><a href="{resume_data['contact']['linkedin']}">LinkedIn</a> | 
+        <a href="{resume_data['contact']['github']}">GitHub</a></p>
+    </header>
+    
+    <section>
+        <h2>Summary</h2>
+        <p>{resume_data['summary']}</p>
+    </section>
+
+    <section>
+        <h2>Skills</h2>
+        <ul>
+            {''.join(f"<li>{skill}</li>" for skill in resume_data['skills'])}
+        </ul>
+    </section>
+
+    <section>
+        <h2>Work Experience</h2>
+        {''.join(f"<h3>{exp['role']} - {exp['company']}</h3><p><em>{exp['period']}</em></p><ul>{''.join(f'<li>{d}</li>' for d in exp['details'])}</ul>" for exp in resume_data['experience'])}
+    </section>
+
+    <section>
+        <h2>Projects</h2>
+        {''.join(f"<h3>{proj['name']}</h3><p><a href='{proj.get('link','')}'>Project Link</a></p><ul>{''.join(f'<li>{d}</li>' for d in proj['details'])}</ul>" for proj in resume_data['projects'])}
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <p>{resume_data['education']}</p>
+    </section>
+
+    <section>
+        <h2>Certification</h2>
+        <p>{resume_data['certification']}</p>
+    </section>
+</body>
+</html>
+"""
+
+# Save as index.html
+with open("index.html", "w", encoding="utf-8") as f:
+    f.write(html_template)
+
+print("✅ Resume webpage generated: index.html")
