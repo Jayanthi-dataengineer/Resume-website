@@ -1,4 +1,3 @@
-# generate_resume.py
 resume_data = {
     "name": "JAYANTHI N",
     "title": "Data Engineer",
@@ -11,11 +10,11 @@ resume_data = {
         "github": "https://github.com/your-username"
     },
     "skills": [
-        "AWS (S3, Redshift, EC2, Lambda)",
-        "Snowflake (ETL, Optimization, Backup)",
-        "Apache Kafka (Streaming, Automation)",
-        "Power BI (Dashboards, Reporting)",
-        "Python, Pandas, Scikit-learn, SQL"
+        "Cloud Platforms: AWS (S3, Redshift, EC2, Lambda)",
+        "Data Engineering: Raw Data, Cleansing, Target Modeling",
+        "Data Warehousing: Snowflake (ETL, Optimization, Backup)",
+        "Streaming: Apache Kafka (Real-Time, Automation)",
+        "BI Tools: Power BI (Dashboards, Reporting, Visualization)"
     ],
     "experience": [
         {
@@ -23,10 +22,9 @@ resume_data = {
             "company": "Vimkes Technologies, Chennai",
             "period": "Nov 2023 – Present",
             "details": [
-                "Built automated data pipelines on AWS for raw data ingestion, cleansing, and transformation.",
-                "Designed Snowflake warehouse solutions for ETL, query optimization, and time zone-based backups.",
-                "Implemented real-time streaming with Apache Kafka to eliminate manual entry.",
-                "Developed Power BI dashboards for reporting and decision-making."
+                "Built automated pipelines for raw data ingestion, cleansing, and transformation into target datasets.",
+                "Developed workflows for ETL, optimization, and time zone-based backup scheduling.",
+                "Implemented real-time data streaming to remove manual entry and designed dashboards for reporting."
             ]
         },
         {
@@ -34,7 +32,7 @@ resume_data = {
             "company": "Bhrati Airtel, Chennai",
             "period": "Aug 2022 – Oct 2023",
             "details": [
-                "Resolved service and account issues with 90%+ customer satisfaction."
+                "Resolved service and account issues, achieving 90%+ customer satisfaction through efficient support and coordination."
             ]
         }
     ],
@@ -43,18 +41,19 @@ resume_data = {
             "name": "Laboratory Information Management System (LIMS)",
             "link": "http://limkes.trustingroup.in/",
             "details": [
-                "Automated data pipelines on AWS for ingestion, cleansing, and transformation.",
-                "Real-time streaming with Apache Kafka.",
-                "Snowflake-based ETL and Power BI dashboards."
+                "Built automated data pipelines on AWS for raw data ingestion, cleansing, and transformation into target datasets.",
+                "Designed Snowflake warehouse solutions for ETL, query optimization, and time zone-based backup scheduling.",
+                "Implemented real-time streaming with Apache Kafka to eliminate manual data entry and enable continuous data flow.",
+                "Developed interactive Power BI dashboards for reporting, monitoring, and decision-making."
             ]
         },
         {
             "name": "Predicting Recruitment Candidate Hiring",
             "tools": "Python, Scikit-learn, Pandas, Matplotlib, Seaborn",
             "details": [
-                "Gradient Boosting model with 93.67% accuracy.",
-                "Performed data cleaning, EDA, and visualizations.",
-                "Delivered insights to improve hiring decisions."
+                "Built a Gradient Boosting model with 93.67% accuracy to predict successful candidates.",
+                "Performed data cleaning, EDA, and visualizations to identify key recruitment patterns.",
+                "Evaluated model performance and delivered insights to improve hiring decisions."
             ]
         }
     ],
