@@ -1,58 +1,100 @@
-# Generate HTML
-html_template = f"""
+# generate_resume_webpage.py
+
+html_template = """
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{resume_data['name']} - Resume</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Jayanthi N - Resume</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #f9f9f9; color: #333; }
+        header { text-align: center; margin-bottom: 30px; }
+        h1 { margin: 0; color: #2c3e50; }
+        h2 { color: #2980b9; border-bottom: 2px solid #ddd; padding-bottom: 5px; }
+        ul { margin: 0; padding-left: 20px; }
+        a { color: #2980b9; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        section { margin-bottom: 25px; }
+    </style>
 </head>
 <body>
     <header>
-        <h1>{resume_data['name']}</h1>
-        <h3>{resume_data['title']}</h3>
-        <p>{resume_data['contact']['location']} | {resume_data['contact']['phone']} | 
-        <a href="mailto:{resume_data['contact']['email']}">{resume_data['contact']['email']}</a></p>
-        <p><a href="{resume_data['contact']['linkedin']}">LinkedIn</a> | 
-        <a href="{resume_data['contact']['github']}">GitHub</a></p>
+        <h1>JAYANTHI N</h1>
+        <h3>Data Engineer</h3>
+        <p>Chennai, India | 8925743792 | 
+        <a href="mailto:jayanthin1728@gmail.com">jayanthin1728@gmail.com</a></p>
     </header>
-    
+
     <section>
         <h2>Summary</h2>
-        <p>{resume_data['summary']}</p>
+        <p>Data Engineer with 2 years of experience in designing automated data pipelines, ensuring accurate
+        data processing, and delivering reliable datasets for analytics. Proven ability to optimize processes,
+        maintain data integrity, and support business decisions through effective reporting solutions.</p>
+    </section>
+
+    <section>
+        <h2>Work Experience</h2>
+        <h3>Junior Data Engineer - Vimkes Technologies, Chennai</h3>
+        <p><em>Nov 2023 – Present</em></p>
+        <ul>
+            <li>Built automated pipelines on AWS for ingestion, cleansing, and transformation.</li>
+            <li>Designed Snowflake warehouse solutions for ETL and query optimization.</li>
+            <li>Implemented real-time streaming with Apache Kafka to eliminate manual entry.</li>
+            <li>Developed Power BI dashboards for reporting and decision-making.</li>
+        </ul>
+
+        <h3>CRO - Bhrati Airtel, Chennai</h3>
+        <p><em>Aug 2022 – Oct 2023</em></p>
+        <ul>
+            <li>Resolved service and account issues, achieving 90%+ customer satisfaction.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Projects</h2>
+        <h3>Laboratory Information Management System (LIMS)</h3>
+        <p><a href="http://limkes.trustingroup.in/">Project Link</a></p>
+        <ul>
+            <li>Automated pipelines on AWS for raw data ingestion, cleansing, and transformation.</li>
+            <li>Snowflake warehouse solutions with ETL and time zone-based backups.</li>
+            <li>Real-time streaming with Apache Kafka.</li>
+            <li>Interactive Power BI dashboards for reporting and monitoring.</li>
+        </ul>
+
+        <h3>Predicting Recruitment Candidate Hiring</h3>
+        <p><em>Tools: Python, Scikit-learn, Pandas, Matplotlib, Seaborn</em></p>
+        <ul>
+            <li>Built Gradient Boosting model with 93.67% accuracy.</li>
+            <li>Performed data cleaning, EDA, and visualizations.</li>
+            <li>Delivered insights to improve hiring decisions.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <p>Bachelor of Commerce in General (CGPA: 8.32), Tagore College of Arts & Science, Chennai (2019 – 2022)</p>
     </section>
 
     <section>
         <h2>Skills</h2>
         <ul>
-            {''.join(f"<li>{skill}</li>" for skill in resume_data['skills'])}
+            <li>AWS (S3, Redshift, EC2, Lambda)</li>
+            <li>Snowflake (ETL, Optimization, Backup)</li>
+            <li>Apache Kafka (Streaming, Automation)</li>
+            <li>Power BI (Dashboards, Reporting)</li>
+            <li>Python, Pandas, Scikit-learn, SQL</li>
         </ul>
     </section>
 
     <section>
-        <h2>Work Experience</h2>
-        {''.join(f"<h3>{exp['role']} - {exp['company']}</h3><p><em>{exp['period']}</em></p><ul>{''.join(f'<li>{d}</li>' for d in exp['details'])}</ul>" for exp in resume_data['experience'])}
-    </section>
-
-    <section>
-        <h2>Projects</h2>
-        {''.join(f"<h3>{proj['name']}</h3><p><a href='{proj.get('link','')}'>Project Link</a></p><ul>{''.join(f'<li>{d}</li>' for d in proj['details'])}</ul>" for proj in resume_data['projects'])}
-    </section>
-
-    <section>
-        <h2>Education</h2>
-        <p>{resume_data['education']}</p>
-    </section>
-
-    <section>
         <h2>Certification</h2>
-        <p>{resume_data['certification']}</p>
+        <p>Advanced Certification in Data Analytics [Edu Bridge (IBM Collaboration)]</p>
     </section>
 </body>
 </html>
 """
 
-# Save as index.html
+# Save to index.html
 with open("index.html", "w", encoding="utf-8") as f:
     f.write(html_template)
 
