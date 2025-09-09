@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 40px;
   background: #f9f9f9;
-  color: #333;
+  color: purple;
 }
 
 header {
@@ -12,14 +12,14 @@ header {
 
 h1 {
   margin: 0;
-  color: purple;        /* Your name in purple */
+  color: purple;        /* Name in purple */
   font-size: 32px;
   font-weight: bold;
 }
 
 h2 {
   color: purple;        /* Sub-headings in purple */
-  border-bottom: 2px solid purple; /* Purple line under heading */
+  border-bottom: 4px solid purple; /* Thick purple line */
   padding-bottom: 5px;
   font-size: 22px;
   font-weight: bold;
