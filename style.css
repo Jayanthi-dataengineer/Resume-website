@@ -1,26 +1,32 @@
 body {
   font-family: Arial, sans-serif;
   margin: 40px;
-  background: #f9f9f9;
-  color: purple;
+  background: #ffffff;   /* White background like your PDF */
+  color: #333;
+  line-height: 1.6;
 }
 
 header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 h1 {
   margin: 0;
   color: purple;        /* Name in purple */
-  font-size: 32px;
+  font-size: 36px;
   font-weight: bold;
+  border-bottom: 4px solid purple;  /* Purple underline */
+  display: inline-block; 
+  padding-bottom: 8px;
 }
 
 h2 {
-  color: purple;        /* Sub-headings in purple */
-  border-bottom: 4px solid purple; /* Thick purple line */
+  color: purple;        /* Section headings in purple */
+  border-bottom: 4px solid purple; /* Purple divider line */
   padding-bottom: 5px;
+  margin-top: 40px;
+  margin-bottom: 15px;
   font-size: 22px;
   font-weight: bold;
   text-transform: uppercase;
@@ -28,21 +34,27 @@ h2 {
 
 h3 {
   font-size: 18px;
-  margin-top: 10px;
+  margin-top: 15px;
   font-weight: bold;
+  color: #333;          /* Job titles in black (like PDF) */
 }
 
 p {
+  margin: 5px 0;
   font-weight: normal;
 }
 
 ul {
-  margin: 0;
+  margin: 5px 0 15px 20px;
   padding-left: 20px;
 }
 
+li {
+  margin-bottom: 5px;
+}
+
 a {
-  color: purple;          /* Links in purple */
+  color: purple;        /* Links in purple */
   text-decoration: none;
   font-weight: bold;
 }
@@ -51,5 +63,5 @@ a:hover {
 }
 
 section {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
