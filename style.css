@@ -22,8 +22,8 @@ h1 {
 }
 
 h2 {
-  color: purple;        /* Section headings in purple */
   border-bottom: 4px solid purple; /* Purple divider line */
+  color: purple;        /* Section headings in purple */
   padding-bottom: 5px;
   margin-top: 40px;
   margin-bottom: 15px;
